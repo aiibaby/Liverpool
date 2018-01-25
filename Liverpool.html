@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>Turoial 1 - Positions and Backgrounds</title>
+     <style>
+#myBG{
+      position:fixed;
+      left:0px;
+      top:0px;
+      width:100vw;
+      height:100vh;
+      object-fit:cover;
+      object-position:center;}
+    #controls {
+               position:absolute;
+               left:0px;
+               top:15vh;}
+#img1 {background-image:url(imgs/1.jpg);}
+#img2 {left: 30px; background-image:url(imgs/2.jpg);}
+#img3 {left:30px; background-image:url(imgs/3.jpg);}
+#img4 {background-image:url(imgs/4.jpg);}
+   .thumbnails {
+			   width:75px;
+			   height:75px;
+			   background-color:red;
+			   position: relative;
+			   margin:30px;
+			   background-size:cover;
+			   background-position:center;
+			   opacity: 0.5;
+			   border-radius: 75px;
+			   border: 2px solid #FFF;
+			   transition:opacity 2s;}
+      .thumbnails:hover {opacity: 1;}
+    #info {opacity:0;
+           position:absolute;
+	       right:0px;
+	       top: 0px;
+	       bottom:0px;
+		   margin:auto;
+		   height:50vh;
+	       width:60vw;
+		   background-color:rgba(255,255,255,0.8);
+		   transition: 1s;}
+		    #infoimg {width:100%;
+				      height:80%;}
+	        #infotext {width:100%;
+				       height:20%;
+					   padding:10px;}
+			
+			#close {position:absolute;
+			        width:25px;
+					height:25px;
+					background-color:red;
+					color:#FFF;
+					left:-12px;
+					top:-12px;
+					padding:5px;
+					cursor:pointer;
+					text-align: center;}
+			
+			
+
+	 </style>
+    </head>
+
+    <boby>
+      <video id="myBG" autoplay loop>
+	       <source src="imgs/bg.mp4"/>
+      </video>
+      <div id="controls">
+         <div id="img1" class="thumbnails"> </div>
+         <div id="img2" class="thumbnails"></div>
+		 <div id="img3" class="thumbnails"></div>
+		 <div id="img4" class="thumbnails"></div>
+		 </div>
+		 
+  <div id="info"> 
+	      <div id="infoimg"></div>
+		  <div id="infotext"></div>
+		  <div id="close">X<div>
+  </div>
+  
+     <script>
+	 document.getElementById("img1").addEventListener("click", function(){
+	   document.getElementById("infoimg").style.backgroundImage = "url(imgs/1.jpg)";
+	   document.getElementById("infoimg").style.backgroundSize = "100% 100%";
+	   document.getElementById("infoimg").style.backgroundPosition = "center center";
+	   document.getElementById("info").style.opacity = 1;
+	   document.getElementById("infotext").innerHTML = "Mohamed Salah. Liverpool FC forward. He socred 18 goals with 23 appearances in 2017-2018 season.";
+	   });
+	   document.getElementById("img2").addEventListener("click", function(){
+	   document.getElementById("infoimg").style.backgroundImage = "url(imgs/2.jpg)";
+	   document.getElementById("infoimg").style.backgroundSize = "100% 100%";
+	   document.getElementById("infoimg").style.backgroundPosition = "center center";
+	   document.getElementById("info").style.opacity = 1;
+	   document.getElementById("infotext").innerHTML = "Sadio Mane. Liverpool FC forward. He socred 6 goals with 16 appearances in 2017-2018 season.";
+	   });
+	   document.getElementById("img3").addEventListener("click", function(){
+	   document.getElementById("infoimg").style.backgroundImage = "url(imgs/3.jpg)";
+	   document.getElementById("infoimg").style.backgroundSize = "100% 100%";
+	   document.getElementById("infoimg").style.backgroundPosition = "center center";
+	   document.getElementById("info").style.opacity = 1;
+	   document.getElementById("infotext").innerHTML = "Robetro Firmino. Liverpool FC forward. He socred 10 goals with 23 appearances in 2017-2018 season.";
+	   });
+	   document.getElementById("img4").addEventListener("click", function(){
+	   document.getElementById("infoimg").style.backgroundImage = "url(imgs/4.jpg)";
+	   document.getElementById("infoimg").style.backgroundSize = "100% 100%";
+	   document.getElementById("infoimg").style.backgroundPosition = "center center";
+	   document.getElementById("info").style.opacity = 1;
+	   document.getElementById("infotext").innerHTML = "Philippe Coutinho. Transfered to Barcelona in this winter window. His transfer fee is reported to be an initial £106 million, which could rise to £142 million with various clauses being met."
+	   });
+	   
+	   document.getElementById("close").addEventListener("click", function(){
+	   document.getElementById("info").style.opacity = 0;});
+	 </script>
+    </boby>
+</html>
